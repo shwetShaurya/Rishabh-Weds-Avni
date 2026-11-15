@@ -1,1 +1,1 @@
-# RIishabh-Weds-Avni
+# Rishabh-Weds-Avni
