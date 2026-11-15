@@ -649,23 +649,22 @@
             
         #scrollViewport{scrollbar-gutter:stable both-edges}
 
-        /* --- Scroll Reveal Animations --- */
-        .reveal-on-scroll {
+        /* --- MAGICAL BLUR REVEAL ANIMATIONS --- */
+        .magical-reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.85s cubic-bezier(0.25, 1, 0.5, 1), transform 0.85s cubic-bezier(0.25, 1, 0.5, 1);
-            will-change: opacity, transform;
+            filter: blur(14px);
+            transform: translateY(25px) scale(0.96);
+            /* Soft, dreamy transition timing */
+            transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+                        filter 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, filter, transform;
         }
         
-        .reveal-scale {
-            opacity: 0;
-            transform: scale(0.92) translateY(20px);
-            transition: opacity 0.85s cubic-bezier(0.25, 1, 0.5, 1), transform 0.85s cubic-bezier(0.25, 1, 0.5, 1);
-            will-change: opacity, transform;
-        }
-        
+        /* The class applied via JavaScript when scrolled into view */
         .is-revealed {
             opacity: 1 !important;
+            filter: blur(0) !important;
             transform: translateY(0) scale(1) !important;
         }
     </style>
@@ -734,7 +733,7 @@
 
     <main class="hero-celestial">
         <p class="sub-tagline">We are getting Engaged!</p>
-        <h2 class="main-names">Rishabh<br>weds<br>Avni</h2>
+        <h2 class="main-names">Rishabh<br>&<br>Avni</h2>
         <p class="desc-tagline">From this day, forever.</p>
         <div class="celestial-visual">
             <div class="crescent-moon"></div>
@@ -742,15 +741,15 @@
         </div>
     </main>
 
-    <section class="section-box reveal-on-scroll">
+    <section class="section-box magical-reveal">
         <h3 class="quote-title">Dearest Family and Friends,</h3>
         <p class="quote-text">With joyful hearts, we invite you to be part of our celebration as two hearts begin a beautiful forever together.</p>
         <div class="symbol-divider">✦ ❖ ✦</div>
     </section>
 
     <section class="section-box" style="padding-top:0;padding-bottom:20px;">
-        <h3 class="quote-title reveal-on-scroll" style="font-size:1.4rem;">The Celebration Begins In</h3>
-        <div class="countdown-card reveal-scale">
+        <h3 class="quote-title magical-reveal" style="font-size:1.4rem;">The Celebration Begins In</h3>
+        <div class="countdown-card magical-reveal">
             <div class="count-grid">
                 <div class="count-box"><div class="count-val" id="cd-d">00</div><div class="count-lbl">Days</div></div>
                 <div class="count-box"><div class="count-val" id="cd-h">00</div><div class="count-lbl">Hours</div></div>
@@ -758,12 +757,12 @@
                 <div class="count-box"><div class="count-val" id="cd-s">00</div><div class="count-lbl">Seconds</div></div>
             </div>
         </div>
-        <div class="symbol-divider reveal-on-scroll">✦ ❖ ✦</div>
+        <div class="symbol-divider magical-reveal">✦ ❖ ✦</div>
     </section>
 
     <section class="section-box">
-        <h3 class="quote-title reveal-on-scroll">The Bride &amp; The Groom</h3>
-        <div class="profile-card reveal-on-scroll">
+        <h3 class="quote-title magical-reveal">The Bride &amp; The Groom</h3>
+        <div class="profile-card magical-reveal">
             <div class="profile-avatar"><img src="https://photonweddifly.com/public/storage/invitation-templates/nf8E8wvaCkoTf4PIVt2OVoenyCXYBYc50lZfLoqE.jpg" alt="Rishabh"></div>
             <h4 class="profile-name">Rishabh Kumar</h4>
             <p class="profile-role">The Groom</p>
@@ -771,7 +770,7 @@
                 Son of Shri Ram Bali Prasad &amp; Smt Seema Kumari
             </p>
         </div>
-        <div class="profile-card reveal-on-scroll">
+        <div class="profile-card magical-reveal">
             <div class="profile-avatar"><img src="https://photonweddifly.com/public/storage/invitation-templates/XemM4Tw2yQydJUTSxW2KZEg57KSKeR17eGzhAQTo.jpg" alt="Avni"></div>
             <h4 class="profile-name">Avni Maurya</h4>
             <p class="profile-role">The Bride</p>
@@ -780,12 +779,12 @@
                 A doctor, and the calmest person in any room
             </p>
         </div>
-        <div class="symbol-divider reveal-on-scroll">✦ ❖ ✦</div>
+        <div class="symbol-divider magical-reveal">✦ ❖ ✦</div>
     </section>
 
-    <section class="section-box reveal-on-scroll">
+    <section class="section-box magical-reveal">
         <h3 class="quote-title">From this day, forever.</h3>
-        <div class="story-card reveal-scale">
+        <div class="story-card">
             <p class="story-desc">We found a little magic in ordinary moments, and now we are ready to create a lifetime of extraordinary ones. Come celebrate the beginning of our next chapter.</p>
             <h4 class="story-head" style="margin-top:10px;">with love</h4>
         </div>
@@ -793,9 +792,9 @@
     </section>
 
     <section class="section-box">
-        <h3 class="quote-title reveal-on-scroll">Wedding Itinerary</h3>
+        <h3 class="quote-title magical-reveal">Wedding Itinerary</h3>
         <div class="itinerary-timeline">
-            <div class="event-entry reveal-on-scroll">
+            <div class="event-entry magical-reveal">
                 <div class="event-icon-dot">✦</div>
                 <div class="event-card-content">
                     <h4 class="event-title">Engagement</h4>
@@ -803,7 +802,7 @@
                     <p class="event-details">The Begining of Forever</p>
                 </div>
             </div>
-            <div class="event-entry reveal-on-scroll">
+            <div class="event-entry magical-reveal">
                 <div class="event-icon-dot">✦</div>
                 <div class="event-card-content">
                     <h4 class="event-title">The Wedding</h4>
@@ -811,18 +810,18 @@
                  </div>
             </div>
         </div>
-        <div class="symbol-divider reveal-on-scroll" style="margin-top:25px;">✦ ❖ ✦</div>
+        <div class="symbol-divider magical-reveal" style="margin-top:25px;">✦ ❖ ✦</div>
     </section>
     <section class="section-box">
-        <h3 class="quote-title reveal-on-scroll">The Venue</h3>
-        <div class="venue-card reveal-scale">
+        <h3 class="quote-title magical-reveal">The Venue</h3>
+        <div class="venue-card magical-reveal">
             <div class="venue-img-wrap"><img src="location.jpg.jpeg" alt=""></div>
             <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#f7e7ce;">The Panache Banquets</h4>
             <p style="font-size:.8rem;color:#9cb2d6;line-height:1.6;margin-top:6px;">Saguna More, Patna, Bihar</p>
             <a href="https://maps.app.goo.gl/FRW7MjRyob3XGGsM7?g_st=aw" target="_blank" rel="noopener" class="gold-button">📍 Google Maps</a>
         </div>
-        <div class="symbol-divider reveal-on-scroll" style="margin-top:25px;">✦ ❖ ✦</div>
-        <div class="symbol-divider reveal-on-scroll" style="margin-top:25px;">THANK YOU</div>
+        <div class="symbol-divider magical-reveal" style="margin-top:25px;">✦ ❖ ✦</div>
+        <div class="symbol-divider magical-reveal" style="margin-top:25px;">THANK YOU</div>
     </section>
 
 <script>
@@ -924,9 +923,7 @@
         })();
     }
 
-    // ----------------------------------------------------
-    // UPDATED AUDIO PLAYER WITH SCROLL/TOUCH AUTOPLAY FIX
-    // ----------------------------------------------------
+    // Audio Player
     var audio = document.getElementById('inviteSong');
     var musicBtn = document.getElementById('musicToggle');
     var intro = document.getElementById('intro');
@@ -946,18 +943,14 @@
             var playPromise = audio.play();
             if (playPromise !== undefined) {
                 playPromise.then(function() {
-                    // Success! Audio is playing. Remove listeners so it doesn't keep firing.
                     userEvents.forEach(function(event) {
                         document.removeEventListener(event, startAudioOnInteraction);
                     });
-                }).catch(function(error) {
-                    // Browser blocked it. Keep listening.
-                });
+                }).catch(function(error) {});
             }
         }
     }
     
-    // Attach the listener to all events
     userEvents.forEach(function(event) {
         document.addEventListener(event, startAudioOnInteraction, { passive: true });
     });
@@ -999,11 +992,11 @@
     setInterval(tick, 1000);
 
     // ----------------------------------------------------
-    // NEW: SCROLL REVEAL OBSERVER
+    // MAGICAL BLUR REVEAL OBSERVER
     // ----------------------------------------------------
     var revealOptions = {
-        root: viewport, // Targets your specific .mobile-frame scrolling container
-        rootMargin: '0px 0px -10% 0px', // Triggers slightly before the element hits the bottom
+        root: viewport, // Targets the custom mobile scrolling frame
+        rootMargin: '0px 0px -12% 0px', // Triggers slightly before element enters view for smooth anticipation
         threshold: 0.05
     };
 
@@ -1011,14 +1004,14 @@
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-revealed');
-                // Removes the observer so the animation only happens once per page load
+                // Unobserve so the magical blur only happens on first scroll-down
                 observer.unobserve(entry.target); 
             }
         });
     }, revealOptions);
 
-    // Grab all elements we want to animate and observe them
-    var revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-scale');
+    // Observe all elements with the 'magical-reveal' class
+    var revealElements = document.querySelectorAll('.magical-reveal');
     revealElements.forEach(function(el) {
         revealObserver.observe(el);
     });
