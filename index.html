@@ -733,7 +733,7 @@
 
     <main class="hero-celestial">
         <p class="sub-tagline">We are getting Engaged!</p>
-        <h2 class="main-names">Rishabh<br>&<br>Avni</h2>
+        <h2 class="main-names">Rishabh<br>weds<br>Avni</h2>
         <p class="desc-tagline">From this day, forever.</p>
         <div class="celestial-visual">
             <div class="crescent-moon"></div>
@@ -992,7 +992,7 @@
     setInterval(tick, 1000);
 
     // ----------------------------------------------------
-    // MAGICAL BLUR REVEAL OBSERVER
+    // MAGICAL BLUR REVEAL OBSERVER (UP & DOWN SCROLL)
     // ----------------------------------------------------
     var revealOptions = {
         root: viewport, // Targets the custom mobile scrolling frame
@@ -1003,9 +1003,12 @@
     var revealObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
+                // When element enters view (scrolling down to it, or scrolling up to it)
                 entry.target.classList.add('is-revealed');
-                // Unobserve so the magical blur only happens on first scroll-down
-                observer.unobserve(entry.target); 
+            } else {
+                // When element leaves view, remove the class to re-trigger the CSS transition backwards!
+                // This resets the animation so it happens again when you scroll back.
+                entry.target.classList.remove('is-revealed'); 
             }
         });
     }, revealOptions);
