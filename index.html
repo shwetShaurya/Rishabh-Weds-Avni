@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Aarav &amp; Meera — Wedding Invitation</title>
+    <meta name="description" content="With love, we invite you to our wedding. Please open our invitation:">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aarav &amp; Meera — Wedding Invitation">
+    <meta property="og:description" content="With love, we invite you to our wedding. Please open our invitation:">
+    <meta property="og:url" content="https://photonweddifly.com/invite/design-preview">
+    <meta property="og:image" content="https://photonweddifly.com/public/storage/invitation-templates/nf8E8wvaCkoTf4PIVt2OVoenyCXYBYc50lZfLoqE.jpg">
+    <meta property="og:image:secure_url" content="https://photonweddifly.com/public/storage/invitation-templates/nf8E8wvaCkoTf4PIVt2OVoenyCXYBYc50lZfLoqE.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aarav &amp; Meera — Wedding Invitation">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://photonweddifly.com/public/storage/invitation-templates/nf8E8wvaCkoTf4PIVt2OVoenyCXYBYc50lZfLoqE.jpg">
+    <meta name="twitter:title" content="Aarav &amp; Meera — Wedding Invitation">
+    <meta name="twitter:description" content="With love, we invite you to our wedding. Please open our invitation:">
+    <meta name="robots" content="noindex,nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            background-color: #04070f;
+            font-family: 'Montserrat', sans-serif;
+            color: #e6ecf8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Ambient Twinkling Stars Background */
+        .space-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(ellipse at bottom, #0d172e 0%, #04070f 100%);
+            overflow: hidden;
+            z-index: 1;
+        }
+        .star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: twinkle var(--duration, 3s) infinite ease-in-out;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.3); }
+        }
+
+        /* Strict Mobile View Container */
+        .mobile-frame {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            height: 100vh;
+            background: #090f1d;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.95), 0 0 20px rgba(212, 175, 55, 0.15);
+            z-index: 10;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .mobile-frame::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Floating Canvas for Golden Sparks */
+        #fx-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 90;
+        }
+
+        /* Top Sticky Navigation bar */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(9, 15, 29, 0.88);
+            backdrop-filter: blur(10px);
+            z-index: 50;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .back-btn {
+            background: rgba(184, 41, 41, 0.85);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .top-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .circle-icon-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: #d4af37;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .circle-icon-btn.active {
+            background: #d4af37;
+            color: #090f1d;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+
+        /* 3D Realistic Envelope Opening Animation */
+        #intro { position: fixed; inset: 0; z-index: 99; transition: .9s; }
+        #intro.is-gone { opacity: 0; visibility: hidden; pointer-events: none; }
+        #intro.is-opening #envelope-screen { transform: scale(1.07); opacity: 0; transition: 720ms cubic-bezier(.3, .8, .3, 1); }
+        
+        #envelope-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #111d3d 0%, #050812 100%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.9s;
+        }
+        #envelope-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .env-header {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            color: #d4af37;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .env-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: #f7e7ce;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-shadow: 0 0 15px rgba(247, 231, 206, 0.35);
+        }
+
+        /* Envelope Scaling for larger screens */
+        @media (min-width:900px) and (min-height:700px){ #intro > div:not([class]), #intro > #env{zoom:1.05} }
+        @media (min-width:1000px) and (min-height:780px){ #intro > div:not([class]), #intro > #env{zoom:1.15} }
+        @media (min-width:1200px) and (min-height:880px){ #intro > div:not([class]), #intro > #env{zoom:1.3} }
+        @media (min-width:1400px) and (min-height:980px){ #intro > div:not([class]), #intro > #env{zoom:1.45} }
+
+        .envelope-box {
+            position: relative;
+            width: 290px;
+            height: 195px;
+            background: #0b1326;
+            border-radius: 8px;
+            perspective: 1000px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+        .envelope-box::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 4;
+        }
+        .env-pocket {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            pointer-events: none;
+        }
+        .env-pocket svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 -2px 6px rgba(0,0,0,0.4));
+        }
+        .env-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 145px solid transparent;
+            border-right: 145px solid transparent;
+            border-top: 108px solid #142245;
+            transform-origin: top;
+            transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.3s;
+            z-index: 7;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+        }
+        .card-inside {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 12px;
+            height: 165px;
+            background: #fdfaf4;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            z-index: 3;
+            transition: transform 1.1s cubic-bezier(0.2, 0.85, 0.25, 1);
+            color: #1e1915;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .card-inside h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            color: #0d1629;
+            font-weight: 700;
+        }
+        .card-inside p {
+            font-size: 0.68rem;
+            letter-spacing: 2px;
+            color: #8c7d6e;
+            margin-top: 6px;
+            text-transform: uppercase;
+        }
+        .wax-seal {
+            position: absolute;
+            top: 96px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            background: radial-gradient(circle, #f9df7c 0%, #c4951b 70%, #825e08 100%);
+            border-radius: 50%;
+            border: 2px solid #fff5cc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 16px rgba(212, 175, 55, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.5s ease;
+        }
+        .wax-seal svg {
+            width: 28px;
+            height: 28px;
+            fill: #2c1a04;
+        }
+        .tap-btn {
+            margin-top: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            color: #f7e7ce;
+            padding: 10px 26px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        .tap-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        /* Opening Trigger Animations */
+        .envelope-box.is-opening .wax-seal { transform: translate(-50%, -50%) scale(0) rotate(180deg); opacity: 0; }
+        .envelope-box.is-opening .env-flap { transform: rotateX(180deg); z-index: 2; }
+        .envelope-box.is-opening .card-inside { transform: translateY(-105px) scale(1.06); z-index: 8; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); }
+
+        /* Celestial Invitation Core Sections */
+        .hero-celestial {
+            position: relative;
+            min-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: radial-gradient(circle at 50% 30%, #152342 0%, #090f1d 75%);
+        }
+        .sub-tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            color: #c9a96e;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .main-names {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.4rem;
+            color: #f7ede2;
+            line-height: 1.1;
+            font-weight: 500;
+            overflow-wrap: anywhere;
+        }
+        .desc-tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: #e5b972;
+            margin: 14px 0 25px;
+            text-transform: uppercase;
+            overflow-wrap: anywhere;
+        }
+        .celestial-visual {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            height: 420px;
+            margin: 0 auto;
+            border-radius: 160px 160px 20px 20px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 10px;
+            background: radial-gradient(circle at 30% 25%, #2a3d66 0%, #0c1424 90%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+        .crescent-moon {
+            position: absolute;
+            top: 25px;
+            left: 35px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            box-shadow: -10px 8px 0 2px #f4d06f;
+            transform: rotate(-25deg);
+            filter: drop-shadow(0 0 10px rgba(244, 208, 111, 0.6));
+        }
+        .couple-portrait {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 150px 150px 15px 15px;
+            opacity: 0.92;
+        }
+        .section-box {
+            padding: 50px 24px;
+            text-align: center;
+            position: relative;
+        }
+        .quote-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: #f7e7ce;
+            margin-bottom: 16px;
+            overflow-wrap: anywhere;
+        }
+        .quote-text {
+            font-size: 0.82rem;
+            line-height: 1.8;
+            color: #aebfd9;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+        .symbol-divider {
+            color: #d4af37;
+            letter-spacing: 6px;
+            font-size: 1rem;
+        }
+
+        /* Countdown Card */
+        .countdown-card {
+            background: rgba(18, 30, 56, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 18px;
+            padding: 26px 16px;
+            margin: 10px 15px 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        .count-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 18px;
+        }
+        .count-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 10px;
+            padding: 10px 4px;
+        }
+        .count-val {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #f7e7ce;
+            font-weight: 600;
+        }
+        .count-lbl {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #9cb2d6;
+            margin-top: 2px;
+        }
+
+        /* Couple Profiles */
+        .profile-card {
+            background: rgba(16, 26, 48, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 24px 18px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            padding: 4px;
+            border: 2px dashed #d4af37;
+        }
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            color: #f7ede2;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+        .profile-role {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #d4af37;
+            text-transform: uppercase;
+            margin-top: 4px;
+            margin-bottom: 10px;
+        }
+        .profile-bio {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #a7bad6;
+            font-weight: 300;
+        }
+
+        /* Itinerary Timeline */
+        .itinerary-timeline {
+            position: relative;
+            margin: 30px 10px 10px;
+            text-align: left;
+        }
+        .itinerary-timeline::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            left: 18px;
+            width: 2px;
+            background: linear-gradient(180deg, #d4af37 0%, rgba(212, 175, 55, 0.1) 100%);
+        }
+        .event-entry {
+            position: relative;
+            padding-left: 48px;
+            margin-bottom: 30px;
+        }
+        .event-icon-dot {
+            position: absolute;
+            left: 6px;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #090f1d;
+            border: 2px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #ffd700;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        .event-card-content {
+            background: rgba(16, 26, 48, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 14px;
+            padding: 16px 18px;
+        }
+        .event-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            color: #f7e7ce;
+            font-weight: 600;
+        }
+        .event-time-tag {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            color: #d4af37;
+            font-weight: 600;
+            margin: 4px 0 8px;
+            text-transform: uppercase;
+        }
+        .event-details {
+            font-size: 0.78rem;
+            color: #9cb2d6;
+            line-height: 1.5;
+        }
+
+        /* Our Love Story Milestones */
+        .story-card {
+            background: rgba(16, 26, 48, 0.65);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 18px;
+            padding: 22px 18px;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+        .story-date {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: #d4af37;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .story-head {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: #f7ede2;
+            margin: 4px 0 8px;
+        }
+        .story-desc {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #a7bad6;
+            font-weight: 300;
+        }
+
+        /* Guest Guide & Dress Code */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .guide-box {
+            background: rgba(16, 26, 48, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 16px;
+            padding: 18px 14px;
+            text-align: center;
+        }
+        .guide-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .guide-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #d4af37;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .guide-text {
+            font-size: 0.75rem;
+            color: #9cb2d6;
+            line-height: 1.4;
+        }
+
+        /* Venue Card */
+        .venue-card {
+            background: radial-gradient(circle at center, rgba(21, 35, 66, 0.8) 0%, rgba(10, 16, 31, 0.9) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 20px;
+            padding: 24px 20px;
+            margin: 10px 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .venue-img-wrap {
+            width: 100%;
+            height: 160px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .venue-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gold-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+            color: #0d1527;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 12px 26px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 18px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Gallery */
+        .inv-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
+        .inv-gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid rgba(212,175,55,.35)}
+
+        /* Note Section */
+        .inv-note{display:flex;align-items:center;justify-content:center;
+            gap:clamp(12px,3.4vw,30px);flex-wrap:nowrap;
+            max-width:720px;margin:0 auto;padding:26px 16px 6px;color:inherit;text-align:center}
+        .inv-note-rule{width:min(688px,calc(100% - 32px));height:1px;margin:30px auto 0;
+            background:currentColor;opacity:.16}
+        .inv-note-photo{flex:0 0 auto;width:clamp(124px,34vw,190px);aspect-ratio:4/5;
+            object-fit:cover;display:block;border-radius:10px;box-shadow:0 12px 28px #00000030}
+        .inv-note-body{flex:1 1 auto;min-width:0;max-width:400px;margin:0;display:flex;
+            flex-direction:column;align-items:center;gap:12px}
+        .inv-note-text{font-family:"Dancing Script",cursive;font-weight:700;
+            font-size:clamp(19px,4.6vw,32px);line-height:1.35;color:inherit;
+            overflow-wrap:break-word}
+            
+        #scrollViewport{scrollbar-gutter:stable both-edges}
+    </style>
+</head>
+<body>
+
+<div class="space-bg" id="spaceBg"></div>
+
+<div class="mobile-frame" id="scrollViewport">
+    <canvas id="fx-canvas"></canvas>
+
+    <div class="top-bar">
+        <button class="back-btn" onclick="location.reload()" title="Play again">
+            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.14em;flex:none"><path d="M21,11a1,1,0,0,0-1,1,8.05,8.05,0,1,1-2.22-5.5h-2.4a1,1,0,0,0,0,2h4.53a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4.77A10,10,0,1,0,22,12,1,1,0,0,0,21,11Z"/></svg> Replay
+        </button>
+        <div class="top-actions">
+            <button class="circle-icon-btn" id="scrollToggleBtn" title="Read it to me">
+                <span data-icon="off" style="display:inline-flex"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.14em;flex:none"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg></span>
+                <span data-icon="on" style="display:none"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.14em;flex:none"><path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"/></svg></span>
+            </button>
+            <button class="circle-icon-btn" id="musicToggle" onclick="toggleMusic()" title="Sound on / off">
+                <span data-icon="off" style="display:inline-flex"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.14em;flex:none"><path d="M12.43,4.1a1,1,0,0,0-1,.12L6.65,8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H6.65l4.73,3.78A1,1,0,0,0,12,20a.91.91,0,0,0,.43-.1A1,1,0,0,0,13,19V5A1,1,0,0,0,12.43,4.1ZM11,16.92l-3.38-2.7A1,1,0,0,0,7,14H4V10H7a1,1,0,0,0,.62-.22L11,7.08ZM19.91,12l1.8-1.79a1,1,0,0,0-1.42-1.42l-1.79,1.8-1.79-1.8a1,1,0,0,0-1.42,1.42L17.09,12l-1.8,1.79a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l1.79-1.8,1.79,1.8a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg></span>
+                <span data-icon="on" style="display:none"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.14em;flex:none"><path d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24ZM5.5,20A1.5,1.5,0,1,1,7,18.5,1.5,1.5,0,0,1,5.5,20Zm13-2A1.5,1.5,0,1,1,20,16.5,1.5,1.5,0,0,1,18.5,18ZM20,7.14,9,8.83v-3L20,4.17Z"/></svg></span>
+            </button>
+        </div>
+    </div>
+
+    <div id="intro" class="is-gone">
+        <div id="envelope-screen">
+            <p class="env-header">Wedding Invitation</p>
+            <h1 class="env-title">Aarav &amp; Meera</h1>
+
+            <div class="envelope-box" id="envBox">
+                <div class="env-flap"></div>
+                <div class="card-inside">
+                    <h4>Aarav &amp; Meera</h4>
+                    <p>December 5, 2026</p>
+                    <div style="font-size:10px;color:#d4af37;margin-top:8px;">✦ ✦ ✦</div>
+                </div>
+
+                <div class="env-pocket">
+                    <svg viewBox="0 0 290 195">
+                        <polygon points="0,0 0,195 145,110" fill="#0d1830" opacity="0.95" />
+                        <polygon points="290,0 290,195 145,110" fill="#0d1830" opacity="0.95" />
+                        <polygon points="0,195 290,195 145,95" fill="#111f3d" />
+                        <line x1="0" y1="195" x2="145" y2="95" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" />
+                        <line x1="290" y1="195" x2="145" y2="95" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" />
+                    </svg>
+                </div>
+
+                <div class="wax-seal" id="sealButton" onclick="openWith('is-opening', 720)">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z"/></svg>
+                </div>
+            </div>
+
+            <button class="tap-btn" onclick="openWith('is-opening', 720)">OPEN THE INVITATION</button>
+            <p style="font-size:.7rem;color:#9cb2d6;letter-spacing:2px;margin-top:10px;">
+                <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.14em;flex:none"><path d="M21.65,2.24a1,1,0,0,0-.8-.23l-13,2A1,1,0,0,0,7,5V15.35A3.45,3.45,0,0,0,5.5,15,3.5,3.5,0,1,0,9,18.5V10.86L20,9.17v4.18A3.45,3.45,0,0,0,18.5,13,3.5,3.5,0,1,0,22,16.5V3A1,1,0,0,0,21.65,2.24ZM5.5,20A1.5,1.5,0,1,1,7,18.5,1.5,1.5,0,0,1,5.5,20Zm13-2A1.5,1.5,0,1,1,20,16.5,1.5,1.5,0,0,1,18.5,18ZM20,7.14,9,8.83v-3L20,4.17Z"/></svg> MUSIC STARTS WHEN YOU OPEN
+            </p>
+        </div>
+    </div>
+
+    <audio id="inviteSong" loop preload="none">
+        <source src="https://gvn-photon-weddifly.sgp1.digitaloceanspaces.com/uploads/flipbook/song/TYjCU81YHByEiXP5yCDYiUHle3QZaGBdxP2iD7yK.mp3">
+    </audio>
+
+    <main class="hero-celestial">
+        <p class="sub-tagline">We are getting Engaged!</p>
+        <h2 class="main-names">Rishabh<br>weds<br>Avni</h2>
+        <p class="desc-tagline">From this day, forever.</p>
+        <div class="celestial-visual">
+            <div class="crescent-moon"></div>
+            <img class="couple-portrait" src="https://photonweddifly.com/public/storage/invitation-templates/nf8E8wvaCkoTf4PIVt2OVoenyCXYBYc50lZfLoqE.jpg" alt="Aarav &amp; Meera">
+        </div>
+    </main>
+
+    <section class="section-box">
+        <h3 class="quote-title">Dearest Family and Friends,</h3>
+        <p class="quote-text">With joyful hearts, we invite you to be part of our celebration as two hearts begin a beautiful forever together.</p>
+        <div class="symbol-divider">✦ ❖ ✦</div>
+    </section>
+
+    <section class="section-box" style="padding-top:0;padding-bottom:20px;">
+        <h3 class="quote-title" style="font-size:1.4rem;">The Celebration Begins In</h3>
+        <div class="countdown-card">
+            <div class="count-grid">
+                <div class="count-box"><div class="count-val" id="cd-d">00</div><div class="count-lbl">Days</div></div>
+                <div class="count-box"><div class="count-val" id="cd-h">00</div><div class="count-lbl">Hours</div></div>
+                <div class="count-box"><div class="count-val" id="cd-m">00</div><div class="count-lbl">Minutes</div></div>
+                <div class="count-box"><div class="count-val" id="cd-s">00</div><div class="count-lbl">Seconds</div></div>
+            </div>
+        </div>
+        <div class="symbol-divider">✦ ❖ ✦</div>
+    </section>
+
+    <section class="section-box">
+        <h3 class="quote-title">The Bride &amp; The Groom</h3>
+        <div class="profile-card">
+            <div class="profile-avatar"><img src="https://photonweddifly.com/public/storage/invitation-templates/nf8E8wvaCkoTf4PIVt2OVoenyCXYBYc50lZfLoqE.jpg" alt="Aarav"></div>
+            <h4 class="profile-name">Rishabh Kumar</h4>
+            <p class="profile-role">The Groom</p>
+            <p class="profile-bio">
+                Son of Shri Ram Bali Prasad &amp; Smt Seema Kumari<br>
+                
+            </p>
+        </div>
+        <div class="profile-card">
+            <div class="profile-avatar"><img src="https://photonweddifly.com/public/storage/invitation-templates/XemM4Tw2yQydJUTSxW2KZEg57KSKeR17eGzhAQTo.jpg" alt="Meera"></div>
+            <h4 class="profile-name">Avni Maurya</h4>
+            <p class="profile-role">The Bride</p>
+            <p class="profile-bio">
+                Daughter of Shri Anil Verma &amp; Smt Sunita Verma<br>
+                A doctor, and the calmest person in any room
+            </p>
+        </div>
+        <div class="symbol-divider">✦ ❖ ✦</div>
+    </section>
+
+    <section class="section-box">
+        <h3 class="quote-title">From this day, forever.</h3>
+        <div class="story-card">
+            <p class="story-desc">We found a little magic in ordinary moments, and now we are ready to create a lifetime of extraordinary ones. Come celebrate the beginning of our next chapter.</p>
+            <h4 class="story-head" style="margin-top:10px;">with love</h4>
+        </div>
+        <div class="symbol-divider" style="margin-top:25px;">✦ ❖ ✦</div>
+    </section>
+
+    <section class="section-box">
+        <h3 class="quote-title">Wedding Itinerary</h3>
+        <div class="itinerary-timeline">
+            <div class="event-entry">
+                <div class="event-icon-dot">✦</div>
+                <div class="event-card-content">
+                    <h4 class="event-title">Engagement</h4>
+                    <p class="event-time-tag">5 December • 5:00 PM</p>
+                    <p class="event-details">The Begining of Forever</p>
+                </div>
+            </div>
+
+                        <div class="event-entry">
+                <div class="event-icon-dot">✦</div>
+                <div class="event-card-content">
+                    <h4 class="event-title">The Wedding</h4>
+                    <p class="event-time-tag">VERY SOON!</p>
+                 </div>
+            </div>
+        </div>
+        <div class="symbol-divider" style="margin-top:25px;">✦ ❖ ✦</div>
+    </section>
+
+    <section class="section-box">
+        <h3 class="quote-title">Cherished Moments</h3>
+        <div class="inv-gallery">
+            <img src="https://photonweddifly.com/public/storage/invitation-templates/V7rD1WYPh2CKcJxqYjgxcsx3c6XCQPRCCcPV3U64.jpg" alt="" loading="lazy">
+            <img src="https://photonweddifly.com/public/storage/invitation-templates/3x3fed9yD6FYKqLCZuRMIJwbTtzEkZ5iLtGQO8u4.jpg" alt="" loading="lazy">
+            <img src="https://photonweddifly.com/public/storage/invitation-templates/wswmXw904YRCHIRoHSGfoHdH7Wja4lV4sQwX2dhY.jpg" alt="" loading="lazy">
+            <img src="https://photonweddifly.com/public/storage/invitation-templates/AO6KL2IMSNTK7vTrcLrO8eXOmrpFKNsAIl9OKyVm.jpg" alt="" loading="lazy">
+        </div>
+        <div class="symbol-divider" style="margin-top:25px;">✦ ❖ ✦</div>
+    </section>
+
+    <section class="section-box">
+        <h3 class="quote-title">The Sanctuary</h3>
+        <div class="venue-card">
+            <div class="venue-img-wrap"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QrIw3rZet_83u6xIclL19tk-80dJC1tSM1ihSF4ZxJF0cZhFuzVc2jgz4D6mqyMfPF5vWu7COdj56dPMJ5fglguRSsOp2E8tBHPC3022x9qvUixV7MxKfrnerzfJnDsJRLgOpPBA=w203-h114-k-no" alt=""></div>
+            <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#f7e7ce;">The Panache Banquets</h4>
+            <p style="font-size:.8rem;color:#9cb2d6;line-height:1.6;margin-top:6px;">Saguna More, Patna, Bihar</p>
+            <a href="https://maps.app.goo.gl/FRW7MjRyob3XGGsM7?g_st=aw " target="_blank" rel="noopener" class="gold-button">📍 Google Maps</a>
+<div class="symbol-divider" style="margin-top:25px;">✦ ❖ ✦</div>
+<div class="symbol-divider" style="margin-top:25px;">THANK YOU</div>
+
+
+        </div>
+    </section>
+
+
+<script>
+(function () {
+    // Top bar buttons setup
+    function showIcon(host, on) {
+        if (!host) { return; }
+        var off = host.querySelector('[data-icon=off]');
+        var yes = host.querySelector('[data-icon=on]');
+        if (off) { off.style.display = on ? 'none' : 'inline-flex'; }
+        if (yes) { yes.style.display = on ? 'inline-flex' : 'none'; }
+    }
+
+    // Auto-scroll mechanics 
+    var viewport = document.getElementById('scrollViewport');
+    var btn = document.getElementById('scrollToggleBtn');
+    var on = false;
+    var frame = null;
+    var at = 0;
+    var last = 0;
+    var glide = '';
+
+    function step(now) {
+        if (!on) { return; }
+        var dt = last ? Math.min((now - last) / 1000, 0.1) : 0;
+        last = now;
+        at += 48 * dt;
+        viewport.scrollTop = at;
+        if (viewport.scrollTop + viewport.clientHeight >= viewport.scrollHeight - 2) { stop(); return; }
+        frame = requestAnimationFrame(step);
+    }
+    function stop() {
+        if (!on) { return; }
+        on = false;
+        cancelAnimationFrame(frame);
+        viewport.style.scrollBehavior = glide;
+        if (btn) { btn.classList.remove('active'); showIcon(btn, false); }
+    }
+    function start() {
+        if (on || !viewport) { return; }
+        on = true;
+        at = viewport.scrollTop;
+        last = 0;
+        glide = viewport.style.scrollBehavior;
+        viewport.style.scrollBehavior = 'auto';
+        if (btn) { btn.classList.add('active'); showIcon(btn, true); }
+        frame = requestAnimationFrame(step);
+    }
+
+    if (btn && viewport) {
+        if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+            document.addEventListener('invite:opened', function () { setTimeout(start, 1500); }, { once: true });
+        }
+        btn.addEventListener('click', function () { on ? stop() : start(); });
+        viewport.addEventListener('wheel', function () { if (on) { stop(); } }, { passive: true });
+        viewport.addEventListener('touchstart', function () { if (on) { stop(); } }, { passive: true });
+    }
+
+    // Canvas Background Starfield Animation
+    var slow = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var canvas = document.getElementById('fx-canvas');
+    if (!canvas || slow) { if (canvas) { canvas.style.display = 'none'; } } 
+    else {
+        var ctx = canvas.getContext('2d');
+        var stars = [];
+
+        function resize() {
+            var box = canvas.parentElement ? canvas.parentElement.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
+            canvas.width = box.width;
+            canvas.height = box.height;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        for (var i = 0; i < 46; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: 0.6 + Math.random() * 1.6,
+                s: 0.12 + Math.random() * 0.4,
+                t: Math.random() * Math.PI * 2
+            });
+        }
+
+        (function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < stars.length; i++) {
+                var p = stars[i];
+                p.y -= p.s;
+                p.t += 0.03;
+                if (p.y + p.r < 0) { p.y = canvas.height + p.r; p.x = Math.random() * canvas.width; }
+                ctx.globalAlpha = 0.35 + Math.abs(Math.sin(p.t)) * 0.5;
+                ctx.fillStyle = '#f7e7ce';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            requestAnimationFrame(draw);
+        })();
+    }
+
+    // Audio Player Settings
+    var audio = document.getElementById('inviteSong');
+    var musicBtn = document.getElementById('musicToggle');
+    var intro = document.getElementById('intro');
+
+    if (audio && musicBtn) {
+        var paintMusic = function () { showIcon(musicBtn, !audio.paused); };
+        audio.addEventListener('play', paintMusic);
+        audio.addEventListener('pause', paintMusic);
+        paintMusic();
+    }
+
+    // Envelope Interactions
+    window.openInvitation = function () {
+        if (intro) { intro.classList.add('is-gone'); }
+        if (audio) { audio.play().catch(function () {}); }
+        document.dispatchEvent(new CustomEvent('invite:opened'));
+    };
+
+    window.openWith = function (klass, ms) {
+        var slow = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!intro || slow) { window.openInvitation(); return; }
+        if (audio) { audio.play().catch(function () {}); }
+        intro.classList.add(klass);
+        setTimeout(window.openInvitation, ms);
+    };
+
+    window.toggleMusic = function () {
+        if (!audio) { return; }
+        if (audio.paused) { audio.play().catch(function () {}); } else { audio.pause(); }
+    };
+
+    // Countdown Timer logic targeting December 5, 2026
+    var targetDate = new Date('2026-12-05T00:00:00');
+    function tick() {
+        var left = Math.max(0, targetDate.getTime() - Date.now());
+        var put = function (id, value) {
+            var el = document.getElementById(id);
+            if (el) { el.textContent = String(value).padStart(2, '0'); }
+        };
+        put('cd-d', Math.floor(left / 86400000));
+        put('cd-h', Math.floor(left / 3600000) % 24);
+        put('cd-m', Math.floor(left / 60000) % 60);
+        put('cd-s', Math.floor(left / 1000) % 60);
+    }
+    tick();
+    setInterval(tick, 1000);
+
+})();
+</script>
+
+</body>
+</html>
